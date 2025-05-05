@@ -3,126 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Délices Maison - Pâtisserie Artisanale</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Délices Maison</div>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="menu">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#produits">Nos Produits</a></li>
-                <li><a href="#tarifs">Tarifs</a></li>
-                <li><a href="#galerie">Galerie</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header class="main-header">
+        <div class="header-content">
+           <div class="logo">
+            <img class="logo-img" src="assets/img/white-logo.png" alt="Logo">
+           </div>
+           <nav class="main-nav">
+            <ul>
+                <li><button class="glow-btn">
+                    <span>
+                      <span aria-hidden="true">
+                        <!-- Home icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4.5 10.5V21h15V10.5"/></svg>
+                      </span>
+                      <span>Accueil</span>
+                      <span aria-hidden="true">
+                        <!-- Arrow icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L21 10.5m0 0l-3.75 3.75M21 10.5H3"/></svg>
+                      </span>
+                    </span>
+                </button></li>
+                <li><button class="glow-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+                    <span>
+                      <span aria-hidden="true">
+                        <!-- User icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 19.5a7.5 7.5 0 0115 0v.75a.75.75 0 01-.75.75h-13.5a.75.75 0 01-.75-.75V19.5z"/></svg>
+                      </span>
+                      <span>A propos</span>
+                      <span aria-hidden="true">
+                        <!-- Arrow icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L21 10.5m0 0l-3.75 3.75M21 10.5H3"/></svg>
+                      </span>
+                    </span>
+                </button></li>
+                <li><button class="glow-btn">
+                    <span>
+                      <span aria-hidden="true">
+                        <!-- Tools icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L7.5 21H3v-4.5L16.732 3.732z"/></svg>
+                      </span>
+                      <span>Services</span>
+                      <span aria-hidden="true">
+                        <!-- Arrow icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L21 10.5m0 0l-3.75 3.75M21 10.5H3"/></svg>
+                      </span>
+                    </span>
+                </button></li>
+                <li><button class="glow-btn">
+                    <span>
+                      <span aria-hidden="true">
+                        <!-- Mail icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15A2.25 2.25 0 002.25 6.75m19.5 0v.243a2.25 2.25 0 01-.876 1.795l-7.5 5.625a2.25 2.25 0 01-2.748 0l-7.5-5.625A2.25 2.25 0 012.25 6.993V6.75"/></svg>
+                      </span>
+                      <span>Contact</span>
+                      <span aria-hidden="true">
+                        <!-- Arrow icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L21 10.5m0 0l-3.75 3.75M21 10.5H3"/></svg>
+                      </span>
+                    </span>
+                </button></li>
             </ul>
-        </nav>
+           </nav>
+        </div>
     </header>
-
-    <section id="accueil" class="hero">
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Pâtisserie héro">
-        </div>
-        <div class="hero-content">
-            <h1>Délices Maison</h1>
-            <p>Pâtisseries artisanales faites avec amour</p>
-        </div>
-    </section>
-
-    <section id="produits">
-        <h2>Nos Spécialités</h2>
-        <div class="produits-grid">
-            <div class="produit">
-                <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gâteaux Personnalisés">
-                <h3>Gâteaux Personnalisés</h3>
-                <p>Pour vos événements spéciaux</p>
+    <!--Hero area start-->
+    <div class="hero_area">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(59,130,246,0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(59,130,246,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(59,130,246,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#222222" />
+            </g>
+        </svg>
+    </div>
+    <!--Hero area end-->
+    <section class="intro-section">
+        <div class="intro-content">
+            <div class="intro-photo">
+                <img src="assets/img/IMG_1060.jpeg" alt="Photo de profil" class="profile-pic">
             </div>
-            <div class="produit">
-                <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pâtisseries Traditionnelles">
-                <h3>Pâtisseries Traditionnelles</h3>
-                <p>Le goût authentique de la tradition</p>
-            </div>
-            <div class="produit">
-                <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mignardises">
-                <h3>Mignardises</h3>
-                <p>Parfaites pour vos réceptions</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="tarifs">
-        <h2>Nos Tarifs</h2>
-        <div class="tarifs-container">
-            <!-- À remplir avec vos tarifs réels -->
-            <div class="tarif">
-                <h3>Gâteaux sur Mesure</h3>
-                <p>À partir de 25€</p>
-            </div>
-            <div class="tarif">
-                <h3>Assortiment de Mignardises</h3>
-                <p>12 pièces - 15€</p>
+            <div class="intro-text">
+                <h2 class="intro-catch">Développeur passionné par l'IA et le web</h2>
+                <p class="intro-desc">
+                    Salut, moi c'est <strong>Ton Nom</strong>.<br>
+                    Étudiant à <strong>Aix Ynov</strong>, spécialisé en développement web et intelligence artificielle.<br>
+                    J'adore coder des applis modernes, explorer l'IA, et créer des expériences interactives.<br>
+                    <span class="intro-keywords">#React #Python #NodeJS #Créativité</span>
+                </p>
             </div>
         </div>
     </section>
-
-    <section id="galerie">
-        <h2>Notre Galerie</h2>
-        <div class="galerie-grid">
-            <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pâtisserie 1">
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2 class="about-title">À propos de moi</h2>
+            <div class="about-grid">
+                <div class="about-edu">
+                    <h3>🎓 Parcours scolaire</h3>
+                    <ul>
+                        <li><strong>Aix Ynov</strong> – Bachelor Informatique (2022-2025)</li>
+                        <li><strong>BTS SIO</strong> – Services Informatiques aux Organisations (2020-2022)</li>
+                    </ul>
+                </div>
+                <div class="about-skills">
+                    <h3>🛠️ Compétences clés</h3>
+                    <div class="skills-badges">
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">Python</span>
+                        <span class="badge">React</span>
+                        <span class="badge">Node.js</span>
+                        <span class="badge">Docker</span>
+                        <span class="badge">Git</span>
+                        <span class="badge">Figma</span>
+                        <span class="badge">SQL</span>
+                    </div>
+                </div>
             </div>
-            <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1464195244916-405fa0a82545?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pâtisserie 2">
-            </div>
-            <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pâtisserie 3">
+            <div class="about-cv">
+                <a href="assets/cv.pdf" class="cv-btn" download>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="22" height="22"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16V4m0 12l-4-4m4 4l4-4m-8 8h8a2 2 0 002-2V7a2 2 0 00-2-2H8a2 2 0 00-2 2v11a2 2 0 002 2z"/></svg>
+                    Télécharger mon CV
+                </a>
             </div>
         </div>
     </section>
-
-    <section id="contact">
-        <h2>Contactez-nous</h2>
-        <div class="contact-info">
-            <p>📞 Téléphone : 06 37 66 70 35</p>
-            <p>📧 Email : emma.bellais@hotmail.fr</p>
-            <p>📍 Adresse : l'ayguade 01300</p>
-        </div>
-        <div class="contact-form">
-            <form action="https://formspree.io/f/xvgznwqr" method="POST">
-                <input type="text" name="name" placeholder="Votre nom" required>
-                <input type="email" name="email" placeholder="Votre email" required>
-                <textarea name="message" placeholder="Votre message" required></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Délices Maison - Tous droits réservés</p>
-    </footer>
-
+    <div class="wave-bg">
+        <svg id="animated-wave" viewBox="0 0 1440 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#181b1f"/>
+                    <stop offset="100%" stop-color="#0a0a0a"/>
+                </linearGradient>
+            </defs>
+            <path id="wavePath" fill="url(#waveGradient)" stroke="#0099ff" stroke-width="3" d="M0,120 Q360,180 720,120 T1440,140 V260 H0 Z"/>
+        </svg>
+    </div>
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.menu').classList.toggle('active');
-            const spans = this.querySelectorAll('span');
-            spans[0].classList.toggle('rotate-45');
-            spans[1].classList.toggle('opacity-0');
-            spans[2].classList.toggle('rotate--45');
-        });
-
-        // Ferme le menu quand on clique sur un lien
-        document.querySelectorAll('.menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.menu').classList.remove('active');
-            });
-        });
+        // Animation de la vague
+        const wave = document.getElementById('wavePath');
+        let t = 0;
+        function animateWave() {
+            t += 0.03;
+            const amplitude = 30;
+            const freq = 1.5;
+            const y1 = 120 + Math.sin(t) * amplitude;
+            const y2 = 180 + Math.cos(t * freq) * amplitude;
+            const y3 = 120 + Math.sin(t + 1) * amplitude;
+            const y4 = 140 + Math.cos(t * freq + 1) * amplitude;
+            wave.setAttribute('d', `M0,${y1} Q360,${y2} 720,${y3} T1440,${y4} V260 H0 Z`);
+            requestAnimationFrame(animateWave);
+        }
+        animateWave();
     </script>
+    <script src="assets/js/main.js"></script>
 </body>
-</html> 
+</html>
