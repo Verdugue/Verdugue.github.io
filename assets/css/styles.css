@@ -1,3 +1,20 @@
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../font/Gill Sans.otf') format('opentype');
+  }
+
+@font-face {
+font-family: 'Gill Sans Medium';
+src: url('../font/Gill Sans Medium.otf') format('opentype');
+}
+
+@font-face {
+font-family: 'Gill Sans Heavy';
+src: url('../font/Gill Sans Heavy.otf') format('opentype');
+}
+
+
+
 /* Variables */
 :root {
     --bg-dark: #0a0a0a;
@@ -57,9 +74,7 @@ body {
     align-items: center;
 }
 
-.logo {
-    
-}
+
 .logo-img {
     width: 100px;
     height: 100px;
@@ -178,25 +193,25 @@ section h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 40px 0 60px 0;
+  margin: 18px 0 28px 0;
   z-index: 2;
   position: relative;
 }
 .about-content {
   background: rgba(34, 34, 34, 0.92);
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   box-shadow: 0 8px 32px rgba(45,94,175,0.10), 0 1.5px 12px #2D5EAF22;
-  padding: 2.5rem 2.5rem 2rem 2.5rem;
-  max-width: 700px;
+  padding: 1.2rem 1rem 1rem 1rem;
+  max-width: 420px;
   margin: 0 auto;
   border: 1.5px solid #2D5EAF33;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.2rem;
 }
 .about-title {
-  font-size: 2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 0.5rem;
@@ -216,7 +231,7 @@ section h2 {
   min-width: 200px;
 }
 .about-edu h3, .about-skills h3 {
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: #2D5EAF;
   margin-bottom: 0.7rem;
   font-weight: 600;
@@ -224,20 +239,20 @@ section h2 {
 .about-edu ul {
   padding-left: 1.2em;
   color: #bfc7d5;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   margin: 0;
 }
 .skills-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6em;
+  gap: 0.3em;
 }
 .badge {
   background: #2D5EAF22;
   color: #2D5EAF;
-  border-radius: 0.7em;
-  padding: 0.35em 1em;
-  font-size: 1em;
+  border-radius: 0.5em;
+  padding: 0.22em 0.7em;
+  font-size: 0.92em;
   font-weight: 600;
   letter-spacing: 0.5px;
   box-shadow: 0 1px 6px #2D5EAF22;
@@ -256,14 +271,14 @@ section h2 {
 .cv-btn {
   display: flex;
   align-items: center;
-  gap: 0.7em;
+  gap: 0.4em;
   background: #2D5EAF;
   color: #fff;
   font-weight: 600;
-  font-size: 1.08em;
+  font-size: 0.98em;
   border: none;
-  border-radius: 0.7em;
-  padding: 0.7em 1.5em;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
   box-shadow: 0 2px 12px #2D5EAF33;
   text-decoration: none;
   transition: background 0.2s, box-shadow 0.2s;
@@ -273,11 +288,12 @@ section h2 {
   box-shadow: 0 4px 18px #2D5EAF55;
 }
 .cv-btn svg {
-  margin-right: 0.2em;
+  width: 18px;
+  height: 18px;
 }
 @media (max-width: 700px) {
   .about-content {
-    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    padding: 0.7rem 0.3rem 0.7rem 0.3rem;
     max-width: 98vw;
   }
   .about-grid {
@@ -518,14 +534,14 @@ section {
 /* --- Vagues Parallaxe Hero --- */
 .hero_area {
     position: relative;
-    height: 10vh;
+    height: 14vh;
     background-color: #0a0a0a;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    width:100%;
+    width: 100%;
 }
 .waves {
     position: absolute;
@@ -567,11 +583,11 @@ section {
     }
 }
 .profile-pic {
-    width: 280px;
-    height: 280px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    margin-top: 120px;
+    margin-top: 40px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.4);
     border: 8px solid #181b1f;
     background: #222;
@@ -604,6 +620,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0.5rem 0;
 }
 @keyframes headerFadeIn {
     0% { opacity: 0; transform: translateY(-40px); }
@@ -612,7 +629,7 @@ section {
 .header-content {
     width: 100%;
     margin: 0 auto;
-    padding: 1.2rem 18rem 1.2rem 18rem;
+    padding: 0.7rem 2rem 0.7rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -622,8 +639,8 @@ section {
     align-items: center;
 }
 .logo-img {
-    width: 86px;
-    height: 56px;
+    width: 60px;
+    height: 36px;
     object-fit: contain;
 }
 
@@ -677,7 +694,7 @@ section {
   --glow: #633;
   --dark: #222;
   --transition: 0.28s;
-  --font-size: 1.1rem;
+  --font-size: 0.95rem;
   font-family: inherit;
   font-weight: bold;
   font-size: var(--font-size);
@@ -693,7 +710,7 @@ section {
   z-index: 1;
   overflow: hidden;
   padding: 0;
-  min-width: 7em;
+  min-width: 5.2em;
 }
 .glow-btn > span {
   display: grid;
@@ -703,7 +720,7 @@ section {
     calc((var(--font-size) * 1.75) * var(--hovered, 0));
   align-items: center;
   background: var(--dark);
-  padding: 0.7em 1.5em;
+  padding: 0.5em 1em;
   transition: grid-template-columns var(--transition);
   position: relative;
   z-index: 2;
@@ -803,35 +820,40 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 18px;
+  margin-bottom: 18px;
   z-index: 2;
   position: relative;
 }
 .intro-content {
-    display: flex;
+    display: flex
+;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    width: 90%;
+    gap: 1.2rem;
+    width: 100%;
     height: 58vh;
-    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    padding: 1.2rem 1.2rem 1rem 1.2rem;
     margin: 0 auto;
+    /* max-width: 340px; */
+    border-radius: 1rem;
+    gap: 76px;
 }
+
 .intro-photo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .intro-content .profile-pic {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   margin: 0;
   border-width: 4px;
   box-shadow: 0 0 32px #2D5EAF55, 0 2px 8px #000a;
 }
 .intro-catch {
-  font-size: 2.1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-align: center;
   color: #fff;
@@ -846,11 +868,11 @@ section {
 }
 .intro-desc {
     color: #bfc7d5;
-    font-size: 1.1rem;
+    font-size: 0.92rem;
     text-align: center;
     margin: 0;
     line-height: 1.6;
-    width: 500px;
+    width: 95%;
 }
 .intro-keywords {
   display: block;
@@ -858,21 +880,28 @@ section {
   color: #2D5EAF;
   font-weight: 600;
   letter-spacing: 1px;
-  font-size: 1rem;
+  font-size: 0.92rem;
 }
 @media (max-width: 600px) {
   .intro-content {
-    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
     max-width: 98vw;
   }
   .intro-content .profile-pic {
-    width: 90px;
-    height: 90px;
+    width: 50px;
+    height: 50px;
   }
   .intro-catch {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
   .intro-desc {
-    font-size: 0.98rem;
+    font-size: 0.85rem;
+  }
+  .about-content {
+    padding: 0.5rem 0.1rem 0.5rem 0.1rem;
+    max-width: 99vw;
+  }
+  .about-title {
+    font-size: 0.95rem;
   }
 } 
