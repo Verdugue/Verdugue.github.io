@@ -190,3 +190,6 @@ if (horizontalTrack) {
   // Init à l'ouverture
   horizontalTrack.dispatchEvent(new Event('scroll'));
 }
+
+// === Menu Burger Rockstar VI Style ===
+// ... existing code ...

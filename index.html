@@ -10,12 +10,12 @@
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
 </head>
 <body>
+    
     <header class="main-header">
-        <div class="header-content">
-           <div class="logo">
-            <img class="logo-img" src="assets/img/white-logo.png" alt="Logo">
-           </div>
-           <nav class="main-nav">
+        <div class="logo">
+            <p class="logo-text"> EB</p>
+        </div>
+        <nav class="main-nav">
             <ul>
                 <li><button class="glow-btn">
                     <span>
@@ -70,8 +70,7 @@
                     </span>
                 </button></li>
             </ul>
-           </nav>
-        </div>
+        </nav>
     </header>
     <!--Hero area start-->
     <div class="hero_area">
@@ -94,7 +93,7 @@
                 <img src="assets/img/IMG_1060.jpeg" alt="Photo de profil" class="profile-pic">
             </div>
             <div class="intro-text">
-                <h2 class="intro-catch">Développeur passionné par l'IA et le web</h2>
+                <h2 class="intro-catch">Développeur passionné <br> par l'IA et le web</h2>
                 <p class="intro-desc">
                     Salut, moi c'est <strong>Eliott Bellais</strong>.<br>
                     Étudiant à <strong>Aix Ynov</strong>, spécialisé en développement web et intelligence artificielle.<br>
@@ -105,64 +104,46 @@
         </div>
     </section>
     <section class="Parcours">
-      <h2 class="Parcours-title">Mon parcours</h2>
-      <div class="Parcours-content">
-        <div class="school-hero">
-          <div class="school-img-wrapper" id="schoolImgWrapper" tabindex="0" role="button" aria-label="Découvrir mon parcours">
-            <img src="assets/img/ynov.jpg" alt="École" class="school-img">
-            <button class="open-card-btn" id="openCardBtn">Découvrir mon parcours</button>
-          </div>
+        <h2 class="Parcours-title">Mon parcours</h2>
+        <div class="Parcours-content">
+            <div class="school-hero">
+                <div class="school-img-wrapper" id="schoolImgWrapper" tabindex="0" role="button" aria-label="Découvrir mon parcours">
+                    <img src="assets/img/ynov.jpg" alt="École" class="school-img">
+                    <button class="open-card-btn" id="openCardBtn">Découvrir mon parcours</button>
+                </div>
+            </div>
+            <div class="school-slider" id="schoolSlider">
+                <div class="slider-track">
+                    <div class="slider-item">Exemple 1</div>
+                    <div class="slider-item">Exemple 2</div>
+                    <div class="slider-item">Exemple 3</div>
+                </div>
+                <button class="slider-arrow slider-arrow-left" id="sliderLeft">&#8592;</button>
+                <button class="slider-arrow slider-arrow-right" id="sliderRight">&#8594;</button>
+            </div>
         </div>
-        <div class="school-slider" id="schoolSlider">
-          <div class="slider-track">
-            <div class="slider-item">Exemple 1</div>
-            <div class="slider-item">Exemple 2</div>
-            <div class="slider-item">Exemple 3</div>
-          </div>
-          <button class="slider-arrow slider-arrow-left" id="sliderLeft">&#8592;</button>
-          <button class="slider-arrow slider-arrow-right" id="sliderRight">&#8594;</button>
-        </div>
-      </div>
     </section>
     <!-- Overlay de la carte (caché par défaut) -->
     <div class="school-card-overlay" id="schoolCardOverlay">
-      <button class="back-card-btn" id="backCardBtn">&#8592; Back</button>
-      <div class="school-card-horizontal-track">
-        <div class="school-card-slide">
-          <img src="assets/img/ecole-placeholder.jpg" alt="École" class="school-card-img">
-          <h2 class="school-card-title">Aix Ynov Campus</h2>
-          <p class="school-card-desc">Ma première année en développement web et IA...</p>
+        <button class="back-card-btn" id="backCardBtn">&#8592; Back</button>
+        <div class="school-card-horizontal-track">
+            <div class="school-card-slide">
+                <img src="assets/img/ecole-placeholder.jpg" alt="École" class="school-card-img">
+                <h2 class="school-card-title">Aix Ynov Campus</h2>
+                <p class="school-card-desc">Ma première année en développement web et IA...</p>
+            </div>
+            <div class="school-card-slide">
+                <img src="assets/img/ecole-placeholder.jpg" alt="École" class="school-card-img">
+                <h2 class="school-card-title">Lycée Exemple</h2>
+                <p class="school-card-desc">Mon lycée, section S...</p>
+            </div>
+            <div class="school-card-slide">
+                <img src="assets/img/ecole-placeholder.jpg" alt="École" class="school-card-img">
+                <h2 class="school-card-title">Collège Exemple</h2>
+                <p class="school-card-desc">Le début de l'aventure scolaire...</p>
+            </div>
         </div>
-        <div class="school-card-slide">
-          <img src="assets/img/ecole-placeholder.jpg" alt="École" class="school-card-img">
-          <h2 class="school-card-title">Lycée Exemple</h2>
-          <p class="school-card-desc">Mon lycée, section S...</p>
-        </div>
-        <div class="school-card-slide">
-          <img src="assets/img/ecole-placeholder.jpg" alt="École" class="school-card-img">
-          <h2 class="school-card-title">Collège Exemple</h2>
-          <p class="school-card-desc">Le début de l'aventure scolaire...</p>
-        </div>
-      </div>
     </div>
     <script src="assets/js/main.js"></script>
-    <script>
-      const openCardBtn = document.getElementById('openCardBtn');
-      const schoolCardOverlay = document.getElementById('schoolCardOverlay');
-      const closeCardBtn = document.getElementById('closeCardBtn');
-
-      if (openCardBtn && schoolCardOverlay && closeCardBtn) {
-        openCardBtn.addEventListener('click', () => {
-          schoolCardOverlay.classList.add('active');
-        });
-        closeCardBtn.addEventListener('click', () => {
-          schoolCardOverlay.classList.remove('active');
-        });
-        // Optionnel : fermer avec la touche Echap
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape') schoolCardOverlay.classList.remove('active');
-        });
-      }
-    </script>
 </body>
 </html>

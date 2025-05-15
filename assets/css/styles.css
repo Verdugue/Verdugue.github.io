@@ -37,6 +37,7 @@ src: url('../font/Gill Sans Heavy.otf') format('opentype');
     --bg-dark: #0A0A0A;
     --bg-darker: #050505;
     --transition: all 0.3s ease;
+    --header-mask-padding: 32px;
 }
 
 /* Reset & Base Styles */
@@ -496,11 +497,9 @@ section {
 .profile-pic {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
     object-fit: cover;
     margin-top: 40px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-    border: 8px solid #181b1f;
     background: #222;
     z-index: 2;
     position: relative;
@@ -524,19 +523,24 @@ section {
 /* Header moderne animé */
 .main-header {
     width: 100%;
-    background: none;
+    background: rgba(213, 213, 213, 0);
     color: #fff;
     position: relative;
     z-index: 10;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0.5rem 0;
+    justify-content: space-around;
+    gap: 100vh;
+    padding: 2rem 0;
 }
 @keyframes headerFadeIn {
     0% { opacity: 0; transform: translateY(-40px); }
     100% { opacity: 1; transform: translateY(0); }
 }
+
+
+
+
 .header-content {
     width: 100%;
     margin: 0 auto;
@@ -548,9 +552,14 @@ section {
 .logo {
     display: flex;
     align-items: center;
+    color:black; 
+    letter-spacing: -4px; 
+    font-size: 35px;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
 }
 .logo-img {
-    width: 60px;
+    width: 100px;
     height: 36px;
     object-fit: contain;
 }
@@ -718,7 +727,7 @@ section {
 .intro-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     gap: 1rem;
 }
@@ -755,17 +764,20 @@ section {
   align-items: center;
 }
 .intro-content .profile-pic {
-  width: 200px;
-  height: 200px;
+  width: 358px;
+  height: 524px;
   margin: 0;
-  border-width: 4px;
   box-shadow: 0 0 32px #2D5EAF55, 0 2px 8px #000a;
+}
+.intro-content .profile-pic:hover {
+  transform: scale(1.01);
+  transition: transform 0.4s cubic-bezier(.55,.1,.45,.9);
 }
 .intro-catch {
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
-  font-size: 1.1rem;
-  text-align: center;
+  font-size: 50px;
+  text-align: start;
   color: #fff;
   letter-spacing: 1px;
   margin: 0;
@@ -777,9 +789,9 @@ section {
   100% { opacity: 1; filter: blur(0); }
 }
 .intro-desc {
-    color: #bfc7d5;
+    color: #ffffff;
     font-size: 0.92rem;
-    text-align: center;
+    text-align: start;
     margin: 0;
     line-height: 1.6;
     width: 95%;
@@ -787,7 +799,7 @@ section {
 .intro-keywords {
   display: block;
   margin-top: 1rem;
-  color: #2D5EAF;
+  color: #971a1a8c;
   font-weight: 600;
   letter-spacing: 1px;
   font-size: 0.92rem;
@@ -1143,4 +1155,54 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   padding: 0 10vw;
   box-sizing: border-box;
-} 
+}
+
+.custom-header {
+  width: 100vw;
+  min-height: 180px;
+  background: linear-gradient(90deg, #4A90E2 0%, #7bc0e0 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--header-mask-padding) 0 var(--header-mask-padding) 48px;
+  position: relative;
+  overflow: hidden;
+
+  background: #1f1f1f;
+background: linear-gradient(27deg,rgba(31, 31, 31, 1) 0%, rgba(31, 31, 31, 1) 62%, rgba(66, 66, 66, 1) 84%, rgba(78, 78, 78, 1) 100%, rgba(115, 115, 115, 1) 100%);
+}
+
+.custom-header h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.custom-header p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  opacity: 0.92;
+}
+
+@media (max-width: 600px) {
+  .custom-header {
+    padding: 18px 0 18px 12px;
+    min-height: 100px;
+  }
+  .custom-header h1 {
+    font-size: 1.5rem;
+  }
+  .custom-header p {
+    font-size: 1rem;
+  }
+}
+
+/* === Menu Burger Rockstar VI Style === */
+/* ... existing code ... */
+
+/* === Menu Burger Rockstar VI Style === */
+/* ... existing code ... */ 
