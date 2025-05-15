@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
 </head>
 <body>
     <header class="main-header">
@@ -93,7 +96,7 @@
             <div class="intro-text">
                 <h2 class="intro-catch">Développeur passionné par l'IA et le web</h2>
                 <p class="intro-desc">
-                    Salut, moi c'est <strong>Ton Nom</strong>.<br>
+                    Salut, moi c'est <strong>Eliott Bellais</strong>.<br>
                     Étudiant à <strong>Aix Ynov</strong>, spécialisé en développement web et intelligence artificielle.<br>
                     J'adore coder des applis modernes, explorer l'IA, et créer des expériences interactives.<br>
                     <span class="intro-keywords">#React #Python #NodeJS #Créativité</span>
@@ -101,67 +104,65 @@
             </div>
         </div>
     </section>
-    <section class="about-section" id="about">
-        <div class="about-content">
-            <h2 class="about-title">À propos de moi</h2>
-            <div class="about-grid">
-                <div class="about-edu">
-                    <h3>🎓 Parcours scolaire</h3>
-                    <ul>
-                        <li><strong>Aix Ynov</strong> – Bachelor Informatique (2022-2025)</li>
-                        <li><strong>BTS SIO</strong> – Services Informatiques aux Organisations (2020-2022)</li>
-                    </ul>
-                </div>
-                <div class="about-skills">
-                    <h3>🛠️ Compétences clés</h3>
-                    <div class="skills-badges">
-                        <span class="badge">JavaScript</span>
-                        <span class="badge">Python</span>
-                        <span class="badge">React</span>
-                        <span class="badge">Node.js</span>
-                        <span class="badge">Docker</span>
-                        <span class="badge">Git</span>
-                        <span class="badge">Figma</span>
-                        <span class="badge">SQL</span>
-                    </div>
-                </div>
-            </div>
-            <div class="about-cv">
-                <a href="assets/cv.pdf" class="cv-btn" download>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="22" height="22"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16V4m0 12l-4-4m4 4l4-4m-8 8h8a2 2 0 002-2V7a2 2 0 00-2-2H8a2 2 0 00-2 2v11a2 2 0 002 2z"/></svg>
-                    Télécharger mon CV
-                </a>
-            </div>
+    <section class="Parcours">
+      <h2 class="Parcours-title">Mon parcours</h2>
+      <div class="Parcours-content">
+        <div class="school-hero">
+          <div class="school-img-wrapper" id="schoolImgWrapper" tabindex="0" role="button" aria-label="Découvrir mon parcours">
+            <img src="assets/img/ynov.jpg" alt="École" class="school-img">
+            <button class="open-card-btn" id="openCardBtn">Découvrir mon parcours</button>
+          </div>
         </div>
+        <div class="school-slider" id="schoolSlider">
+          <div class="slider-track">
+            <div class="slider-item">Exemple 1</div>
+            <div class="slider-item">Exemple 2</div>
+            <div class="slider-item">Exemple 3</div>
+          </div>
+          <button class="slider-arrow slider-arrow-left" id="sliderLeft">&#8592;</button>
+          <button class="slider-arrow slider-arrow-right" id="sliderRight">&#8594;</button>
+        </div>
+      </div>
     </section>
-    <div class="wave-bg">
-        <svg id="animated-wave" viewBox="0 0 1440 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <defs>
-                <linearGradient id="waveGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#181b1f"/>
-                    <stop offset="100%" stop-color="#0a0a0a"/>
-                </linearGradient>
-            </defs>
-            <path id="wavePath" fill="url(#waveGradient)" stroke="#0099ff" stroke-width="3" d="M0,120 Q360,180 720,120 T1440,140 V260 H0 Z"/>
-        </svg>
+    <!-- Overlay de la carte (caché par défaut) -->
+    <div class="school-card-overlay" id="schoolCardOverlay">
+      <button class="back-card-btn" id="backCardBtn">&#8592; Back</button>
+      <div class="school-card-horizontal-track">
+        <div class="school-card-slide">
+          <img src="assets/img/ecole-placeholder.jpg" alt="École" class="school-card-img">
+          <h2 class="school-card-title">Aix Ynov Campus</h2>
+          <p class="school-card-desc">Ma première année en développement web et IA...</p>
+        </div>
+        <div class="school-card-slide">
+          <img src="assets/img/ecole-placeholder.jpg" alt="École" class="school-card-img">
+          <h2 class="school-card-title">Lycée Exemple</h2>
+          <p class="school-card-desc">Mon lycée, section S...</p>
+        </div>
+        <div class="school-card-slide">
+          <img src="assets/img/ecole-placeholder.jpg" alt="École" class="school-card-img">
+          <h2 class="school-card-title">Collège Exemple</h2>
+          <p class="school-card-desc">Le début de l'aventure scolaire...</p>
+        </div>
+      </div>
     </div>
-    <script>
-        // Animation de la vague
-        const wave = document.getElementById('wavePath');
-        let t = 0;
-        function animateWave() {
-            t += 0.03;
-            const amplitude = 30;
-            const freq = 1.5;
-            const y1 = 120 + Math.sin(t) * amplitude;
-            const y2 = 180 + Math.cos(t * freq) * amplitude;
-            const y3 = 120 + Math.sin(t + 1) * amplitude;
-            const y4 = 140 + Math.cos(t * freq + 1) * amplitude;
-            wave.setAttribute('d', `M0,${y1} Q360,${y2} 720,${y3} T1440,${y4} V260 H0 Z`);
-            requestAnimationFrame(animateWave);
-        }
-        animateWave();
-    </script>
     <script src="assets/js/main.js"></script>
+    <script>
+      const openCardBtn = document.getElementById('openCardBtn');
+      const schoolCardOverlay = document.getElementById('schoolCardOverlay');
+      const closeCardBtn = document.getElementById('closeCardBtn');
+
+      if (openCardBtn && schoolCardOverlay && closeCardBtn) {
+        openCardBtn.addEventListener('click', () => {
+          schoolCardOverlay.classList.add('active');
+        });
+        closeCardBtn.addEventListener('click', () => {
+          schoolCardOverlay.classList.remove('active');
+        });
+        // Optionnel : fermer avec la touche Echap
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') schoolCardOverlay.classList.remove('active');
+        });
+      }
+    </script>
 </body>
 </html>

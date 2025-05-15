@@ -102,3 +102,91 @@ if (aboutSection) {
   }, { threshold: 0.3 });
   observer.observe(aboutSection);
 }
+
+// === Parcours scolaire : slider animé ===
+const showSliderBtn = document.getElementById('showSliderBtn');
+const schoolSlider = document.getElementById('schoolSlider');
+const sliderTrack = schoolSlider ? schoolSlider.querySelector('.slider-track') : null;
+const sliderLeft = document.getElementById('sliderLeft');
+const sliderRight = document.getElementById('sliderRight');
+
+if (showSliderBtn && schoolSlider) {
+  showSliderBtn.addEventListener('click', () => {
+    schoolSlider.classList.add('active');
+    setTimeout(() => {
+      schoolSlider.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 350);
+  });
+}
+if (sliderLeft && sliderTrack) {
+  sliderLeft.addEventListener('click', () => {
+    sliderTrack.scrollBy({ left: -650, behavior: 'smooth' });
+  });
+}
+if (sliderRight && sliderTrack) {
+  sliderRight.addEventListener('click', () => {
+    sliderTrack.scrollBy({ left: 650, behavior: 'smooth' });
+  });
+}
+
+// === Overlay Parcours GTA VI Fullscreen & Horizontal ===
+const openCardBtn = document.getElementById('openCardBtn');
+const schoolCardOverlay = document.getElementById('schoolCardOverlay');
+const backCardBtn = document.getElementById('backCardBtn');
+const horizontalTrack = document.querySelector('.school-card-horizontal-track');
+const schoolImgWrapper = document.getElementById('schoolImgWrapper');
+
+if (schoolImgWrapper && openCardBtn && schoolCardOverlay && backCardBtn) {
+  const openOverlay = () => {
+    schoolCardOverlay.classList.add('active');
+    if (horizontalTrack) horizontalTrack.scrollTo({ left: 0 });
+  };
+  schoolImgWrapper.addEventListener('click', openOverlay);
+  schoolImgWrapper.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') openOverlay();
+  });
+  openCardBtn.addEventListener('click', openOverlay);
+  backCardBtn.addEventListener('click', () => {
+    schoolCardOverlay.classList.remove('active');
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') schoolCardOverlay.classList.remove('active');
+  });
+}
+// Scroll horizontal à la molette (sans shift)
+if (horizontalTrack) {
+  horizontalTrack.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      horizontalTrack.scrollBy({ left: e.deltaY * 4, behavior: 'smooth' });
+    }
+  }, { passive: false });
+}
+
+// Polyfill smooth scroll pour anciens navigateurs
+(function() {
+  if ('scrollBehavior' in document.documentElement.style) return;
+  var originalScrollTo = window.scrollTo;
+  window.scrollTo = function(options) {
+    if (typeof options === 'object' && options.behavior === 'smooth') {
+      window.scroll({ top: options.top, left: options.left, behavior: 'smooth' });
+    } else {
+      originalScrollTo.apply(window, arguments);
+    }
+  };
+})();
+
+// Effet dynamique sur le background de l'overlay au scroll horizontal (fix)
+if (horizontalTrack) {
+  horizontalTrack.addEventListener('scroll', () => {
+    const maxScroll = horizontalTrack.scrollWidth - horizontalTrack.clientWidth;
+    const scrollLeft = horizontalTrack.scrollLeft;
+    const ratio = Math.min(Math.max(scrollLeft / maxScroll, 0), 1);
+    // Image code.png disparaît progressivement (max 0.35)
+    document.documentElement.style.setProperty('--code-bg-opacity', (0.35 - 0.35 * ratio).toString());
+    // Overlay bleu clair devient plus transparent, couleur secondaire plus visible (max 0.5)
+    document.documentElement.style.setProperty('--overlay-opacity', (0.5 - 0.5 * ratio).toString());
+  });
+  // Init à l'ouverture
+  horizontalTrack.dispatchEvent(new Event('scroll'));
+}
