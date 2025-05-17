@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -11,67 +10,54 @@
 </head>
 <body>
     <header class="main-header">
-        <div class="header-content">
+        <nav class="main-nav">
            <div class="logo">
-            <img class="logo-img" src="assets/img/white-logo.png" alt="Logo">
+            <img class="logo-img" src="assets/img/logo.png" alt="Logo">
            </div>
-           <nav class="main-nav">
-            <ul>
-                <li><button class="glow-btn">
-                    <span>
-                      <span aria-hidden="true">
-                        <!-- Home icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4.5 10.5V21h15V10.5"/></svg>
-                      </span>
-                      <span>Accueil</span>
-                      <span aria-hidden="true">
-                        <!-- Arrow icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L21 10.5m0 0l-3.75 3.75M21 10.5H3"/></svg>
-                      </span>
-                    </span>
-                </button></li>
-                <li><button class="glow-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
-                    <span>
-                      <span aria-hidden="true">
-                        <!-- User icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 19.5a7.5 7.5 0 0115 0v.75a.75.75 0 01-.75.75h-13.5a.75.75 0 01-.75-.75V19.5z"/></svg>
-                      </span>
-                      <span>A propos</span>
-                      <span aria-hidden="true">
-                        <!-- Arrow icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L21 10.5m0 0l-3.75 3.75M21 10.5H3"/></svg>
-                      </span>
-                    </span>
-                </button></li>
-                <li><button class="glow-btn">
-                    <span>
-                      <span aria-hidden="true">
-                        <!-- Tools icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L7.5 21H3v-4.5L16.732 3.732z"/></svg>
-                      </span>
-                      <span>Services</span>
-                      <span aria-hidden="true">
-                        <!-- Arrow icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L21 10.5m0 0l-3.75 3.75M21 10.5H3"/></svg>
-                      </span>
-                    </span>
-                </button></li>
-                <li><button class="glow-btn">
-                    <span>
-                      <span aria-hidden="true">
-                        <!-- Mail icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15A2.25 2.25 0 002.25 6.75m19.5 0v.243a2.25 2.25 0 01-.876 1.795l-7.5 5.625a2.25 2.25 0 01-2.748 0l-7.5-5.625A2.25 2.25 0 012.25 6.993V6.75"/></svg>
-                      </span>
-                      <span>Contact</span>
-                      <span aria-hidden="true">
-                        <!-- Arrow icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L21 10.5m0 0l-3.75 3.75M21 10.5H3"/></svg>
-                      </span>
-                    </span>
-                </button></li>
-            </ul>
-           </nav>
+
+            <div class="nav-links">
+                <button class="glow-btn">
+                    <p>
+                        Accueil
+                    </p>
+                </button>
+                <button class="glow-btn">
+                    <p>
+                        Mon parcours
+                    </p>
+                </button>
+                <button class="glow-btn">
+                    <p>
+                        Mes projets
+                    </p>
+                </button>
+                
+              </div>
+        </nav>
+            
+        <div class="nav-links">
+          <button class="glow-btn">
+            <a href="assets/cv.pdf" download>
+              <span class="download-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+              </span>
+              <span class="button-text">Télécharger mon CV</span>
+            </a>
+          </button>
+          <button class="glow-btn">
+            <a href="#">
+              <span class="download-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+              </span>
+              <span class="button-text">Me contacter</span>
+            </a>
+          </button>
         </div>
+        
     </header>
     <!--Hero area start-->
     <div class="hero_area">
@@ -94,7 +80,7 @@
                 <img src="assets/img/IMG_1060.jpeg" alt="Photo de profil" class="profile-pic">
             </div>
             <div class="intro-text">
-                <h2 class="intro-catch">Développeur passionné par l'IA et le web</h2>
+                <h2 class="intro-catch">Développeur passionné par <br> l'IA et le web</h2>
                 <p class="intro-desc">
                     Salut, moi c'est <strong>Eliott Bellais</strong>.<br>
                     Étudiant à <strong>Aix Ynov</strong>, spécialisé en développement web et intelligence artificielle.<br>
@@ -145,6 +131,74 @@
         </div>
       </div>
     </div>
+
+    <section class="projets">
+      <h2 class="projets-title">Mes projets</h2>
+      <div class="projets-content">
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <!-- Premier groupe de slides -->
+            <div class="carousel-slide">
+              <img src="assets/img/projet1.jpg" alt="Phocéenne Auto">
+              <h3>Phocéenne Auto</h3>
+              <p>Application web de gestion de concession automobile permettant de gérer les véhicules, clients, fournisseurs et transactions. Développée avec PHP et MySQL.</p>
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/img/projet2.jpg" alt="Boutique de Poisson">
+              <h3>Boutique de Poisson</h3>
+              <p>Application web e-commerce avec gestion des produits, panier et paiement. Architecture Node.js (backend) et HTML/CSS/JS (frontend). Base de données incluse, lancement rapide via npm.</p>
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/img/projet3.jpg" alt="PokéFight">
+              <h3>PokéFight</h3>
+              <p>Plateforme web de combat Pokémon en temps réel. Authentification, matchmaking, progression, combats interactifs et classement. Stack moderne : React, Node.js, MySQL, Socket.io.</p>
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/img/projet4.jpg" alt="Challenge48H">
+              <h3>Challenge 48H</h3>
+              <p>Application Streamlit pour explorer, entraîner et prédire les prix de maisons à partir du dataset Kaggle "House Prices". Visualisation, feature engineering, et comparaison de modèles (Random Forest, XGBoost, LightGBM).</p>
+            </div>
+            <!-- Deuxième groupe de slides (copie du premier) -->
+            <div class="carousel-slide">
+              <img src="assets/img/projet1.jpg" alt="Phocéenne Auto">
+              <h3>Phocéenne Auto</h3>
+              <p>Application web de gestion de concession automobile permettant de gérer les véhicules, clients, fournisseurs et transactions. Développée avec PHP et MySQL.</p>
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/img/projet2.jpg" alt="Boutique de Poisson">
+              <h3>Boutique de Poisson</h3>
+              <p>Application web e-commerce de vente de poissons avec gestion des produits, panier et paiement. Architecture Node.js (backend) et HTML/CSS/JS (frontend). Base de données incluse, lancement rapide via npm.</p>
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/img/projet3.jpg" alt="PokéFight">
+              <h3>PokéFight</h3>
+              <p>Plateforme web de combat Pokémon en temps réel. Authentification, matchmaking, progression, combats interactifs et classement. Stack moderne : React, Node.js, MySQL, Socket.io.</p>
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/img/projet4.jpg" alt="Challenge48H">
+              <h3>Challenge 48H</h3>
+              <p>Application Streamlit pour explorer, entraîner et prédire les prix de maisons à partir du dataset Kaggle "House Prices". Visualisation, feature engineering, et comparaison de modèles (Random Forest, XGBoost, LightGBM).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="assets/js/main.js"></script>
     <script>
       const openCardBtn = document.getElementById('openCardBtn');
